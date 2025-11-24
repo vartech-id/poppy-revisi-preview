@@ -8,8 +8,16 @@ const goNext = () => router.push({ name: 'form' })
 <template>
   <div class="home-shell">
     <div class="content-wrapper">
+      <!-- PAGE 1: full image, rasio aman -->
       <section class="top-content">
+        <img
+          class="invite-image"
+          src="./assets/mobileLong.png"
+          alt="Invitation"
+        />
       </section>
+
+      <!-- PAGE 2: logo + tombol di bawah gambar -->
       <section class="bottom-content">
         <main class="page">
           <div class="invite-card">
@@ -23,10 +31,9 @@ const goNext = () => router.push({ name: 'form' })
     </div>
   </div>
 </template>
-
-<style scoped>
+<style>
 .home-shell {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -36,48 +43,37 @@ const goNext = () => router.push({ name: 'form' })
   overflow-y: auto;
 }
 
+/* frame “HP” di tengah */
 .content-wrapper {
-  width: min(100vw, 420px);  /* frame “HP”, di tengah di desktop */
+  width: 100%;
+  max-width: 480px;        /* kunci lebar biar di desktop nggak melebar */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-/* FRAME 9:16, rasio DIKUNCI */
-.top-content,
+/* PAGE 1: gambar undangan dengan rasio terkunci */
+.top-content {
+  width: 100%;
+}
+
+.invite-image {
+  display: block;
+  width: 100%;
+  height: auto;           /* ❗ inilah yang mengunci aspect ratio */
+}
+
+/* PAGE 2: area logo + tombol di bawah gambar */
 .bottom-content {
   width: 100%;
-  aspect-ratio: 9 / 16;       /* ❗ kunci rasio container */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-image: url("./assets/mobileLong.png");
-  background-repeat: no-repeat;
-
-  /* gambar 2x tinggi frame, lebar ikut frame
-     karena frame 9:16 dan gambar 9:32,
-     ini tetap RASIO PAS, tidak gepeng */
-  background-size: 100% 200%;
-  background-position-x: center;
+  padding: 24px 16px 40px;
+  background: #f3eee7;   /* warna dasar sama dengan body */
 }
 
-/* Halaman 1 lihat bagian atas gambar */
-.top-content {
-  background-position-y: top;
-}
-
-/* Halaman 2 lihat bagian bawah gambar */
-.bottom-content {
-  background-position-y: bottom;
-}
-
-/* Isi page 2 */
 .page {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .invite-card {
@@ -91,12 +87,11 @@ const goNext = () => router.push({ name: 'form' })
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: clamp(24px, 6vh, 72px);
+  gap: 1.5rem;
 }
 
 .mainLogo {
   width: 70%;
-  padding-bottom: 3em;
 }
 
 .buttonForm {
@@ -112,7 +107,7 @@ const goNext = () => router.push({ name: 'form' })
   cursor: pointer;
 }
 
-/* Desktop: frame di tengah */
+/* Desktop: frame di tengah layar */
 @media (min-width: 768px) {
   .home-shell {
     align-items: center;
@@ -121,6 +116,4 @@ const goNext = () => router.push({ name: 'form' })
 }
 
 </style>
-
-
 

@@ -13,7 +13,7 @@
   </main>
 </template>
 
-<style>
+<style scoped>
 .page {
     min-height: 100vh;
     display: flex;
