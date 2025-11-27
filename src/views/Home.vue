@@ -1,126 +1,90 @@
 <script setup>
 import { useRouter } from 'vue-router'
 
-const router = useRouter()
-const goNext = () => router.push({ name: 'form' })
+const router = useRouter();
+const goNext = () => router.push({name : 'form'})
+
+
 </script>
 
 <template>
-  <div class="home-shell">
-    <div class="content-wrapper">
-      <section class="top-content">
-      </section>
-      <section class="bottom-content">
-        <main class="page">
-          <div class="invite-card">
+    <main class="page">
+        <div class="invite-card">
             <div class="mainContent">
-              <img class="mainLogo" src="./assets/mainLogo.png" alt="poppylogo" />
-              <button class="buttonForm" @click="goNext">Click to Register</button>
+                <img class="mainLogo" src="./assets/pertamina/mainLogo.png" alt="pertaminaLogo"></img>
+                <button class="buttonRegister" @click="goNext">Click to register</button>
+                <span>Powered By Vartech.id </span>
             </div>
-          </div>
-        </main>
-      </section>
-    </div>
-  </div>
+        </div>
+    </main>
 </template>
 
 <style scoped>
-.home-shell {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background: #f3eee7;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-y: auto;
-}
 
-.content-wrapper {
-  width: min(100vw, 420px);  /* frame “HP”, di tengah di desktop */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-/* FRAME 9:16, rasio DIKUNCI */
-.top-content,
-.bottom-content {
-  width: 100%;
-  aspect-ratio: 9 / 16;       /* ❗ kunci rasio container */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-image: url("./assets/mobileLong.png");
-  background-repeat: no-repeat;
-
-  /* gambar 2x tinggi frame, lebar ikut frame
-     karena frame 9:16 dan gambar 9:32,
-     ini tetap RASIO PAS, tidak gepeng */
-  background-size: 100% 200%;
-  background-position-x: center;
-}
-
-/* Halaman 1 lihat bagian atas gambar */
-.top-content {
-  background-position-y: top;
-}
-
-/* Halaman 2 lihat bagian bawah gambar */
-.bottom-content {
-  background-position-y: bottom;
-}
-
-/* Isi page 2 */
 .page {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: #E7FAFC;
 }
 
 .invite-card {
-  width: 100%;
-  background: transparent;
+    width: min(100vw, calc(100vh * 9 / 16));
+    aspect-ratio: 9 / 16;
+    background-image: url("./assets//pertamina/bg.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.mainContent {
+.mainContent{
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: clamp(24px, 6vh, 72px);
+  justify-content: center;  /* center VERTIKAL seluruh kolom (img + form) */
+  align-items: center;      /* center HORIZONTAL */
+  padding-bottom: 0em;
+  padding-top: 1em;
 }
+
 
 .mainLogo {
-  width: 70%;
-  padding-bottom: 3em;
+    width:70%;
+    padding-bottom: 3em;
 }
 
-.buttonForm {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 4rem;
-  border-radius: 9999px;
-  background-color: #024123;
-  color: #fff;
-  border: none;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-/* Desktop: frame di tengah */
-@media (min-width: 768px) {
-  .home-shell {
+.buttonRegister{
+    display: inline-flex;
     align-items: center;
-    padding: 24px;
-  }
+    justify-content: center;
+    padding: 0.5rem 4rem;
+    border-radius: 9999px;         
+    background-color: #3E5D6C;     
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.btn:hover {
+    opacity: 0.9;
 }
 
+span{
+  padding-top: 9em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 </style>
-
-
-
