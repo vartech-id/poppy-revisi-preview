@@ -83,7 +83,8 @@ const submit = () => {
   flex-direction: column;
   justify-content: center;  /* center VERTIKAL seluruh kolom (img + form) */
   align-items: center;      /* center HORIZONTAL */
-  padding-bottom: 5em;
+  padding-bottom: 0em;
+  padding-top: 4em;
 }
 
 
@@ -108,7 +109,7 @@ const submit = () => {
 }
 
 input {
-    padding: 12px 14px;
+    padding: 10px 14px;
     border: 1px solid  #3E5D6C;
     background: #fff;
     border-radius: 9999px;    
@@ -135,7 +136,7 @@ input {
 }
 
 span{
-  padding-top: 3em;
+  padding-top: 6em;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;

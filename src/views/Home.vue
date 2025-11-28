@@ -12,6 +12,7 @@ const goNext = () => router.push({name : 'form'})
         <div class="invite-card">
             <div class="mainContent">
                 <img class="mainLogo" src="./assets/pertamina/mainLogo.png" alt="pertaminaLogo"></img>
+                <img class="detail-event" src="./assets/pertamina/detail.png" alt="detail-acara"></img>
                 <button class="buttonRegister" @click="goNext">Click to register</button>
                 <span>Powered By Vartech.id </span>
             </div>
@@ -52,13 +53,18 @@ const goNext = () => router.push({name : 'form'})
   justify-content: center;  /* center VERTIKAL seluruh kolom (img + form) */
   align-items: center;      /* center HORIZONTAL */
   padding-bottom: 0em;
-  padding-top: 1em;
+  padding-top: 6em;
 }
 
 
 .mainLogo {
     width:70%;
-    padding-bottom: 3em;
+    padding-bottom: 2em;
+}
+
+.detail-event{
+    width: 65%;
+    padding-bottom: 2em;
 }
 
 .buttonRegister{
@@ -82,7 +88,7 @@ const goNext = () => router.push({name : 'form'})
 }
 
 span{
-  padding-top: 9em;
+  padding-top: 12em;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;

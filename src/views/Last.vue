@@ -45,7 +45,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 4em;
+  padding-bottom: 0em;
+  padding-top: 3em;
     }
 
 .mainLogo {
@@ -55,6 +56,7 @@
 
 .thankYou{
   width: 80%;
+  padding-bottom: 5em;
 
 }
 
