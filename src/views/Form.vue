@@ -3,7 +3,7 @@ import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const form = reactive({ name: '', whatsapp: '', email: '', company: '' })
+const form = reactive({ name: '', whatsapp: '', email: '', company: '',  status: '' })
 
 const submit = () => {
   router.push({ name: 'last', query: { ...form } })
@@ -36,7 +36,17 @@ const submit = () => {
                             v-model="form.company"
                             required
                             placeholder="Company"
-                        />                        
+                        />
+                        <select
+                        v-model="form.status"
+                        required
+                        >
+                        <option disabled value="">
+                            Pilih status kehadiran
+                        </option>
+                        <option value="hadir">Hadir</option>
+                        <option value="tidak_hadir">Tidak Hadir</option>
+                        </select>                      
                     </div>
                         <button type="submit" class="buttonForm">Submit</button>
                 </form>
@@ -84,13 +94,13 @@ const submit = () => {
   justify-content: center;  /* center VERTIKAL seluruh kolom (img + form) */
   align-items: center;      /* center HORIZONTAL */
   padding-bottom: 0em;
-  padding-top: 4em;
+  padding-top: 2em;
 }
 
 
 .mainLogo {
     width: 60%;
-    padding-bottom: 3em;
+    padding-bottom: 2em;
 }
 
 .form {
@@ -98,7 +108,7 @@ const submit = () => {
     flex-direction: column;
     width: 70%;             /* misal: biar gak kepenuhan layar */
     max-width: 320px;  
-    gap: 2.5em;
+    gap: 2em;
 }
 
 .inputWrapper{
@@ -108,7 +118,7 @@ const submit = () => {
     text-align: center;
 }
 
-input {
+input, select {
     padding: 10px 14px;
     border: 1px solid  #3E5D6C;
     background: #fff;
