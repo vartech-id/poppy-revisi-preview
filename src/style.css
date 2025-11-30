@@ -1,4 +1,12 @@
+@font-face {
+  font-family: 'branda';
+  src: url('./assets/fonts/Branda-yolq.ttf') format('trueType');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
