@@ -1,5 +1,11 @@
 <script setup>
+import { ref } from 'vue';
 
+const mode = ref("checkin");
+const setMode = (newMode) => {
+    mode.value = newMode;
+    focusInput();
+};
 </script>
 
 <template>
@@ -13,15 +19,22 @@
                 <span>Email : </span>
                 <span>Status Check-in : </span>
             </div>
-            <div class="toggle-wrapper">
-                <label>CHECK-IN</label>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <label>SOUVERNIR</label>
-            </div>
-
+        <div class="mode-toggle-container">
+                <div class="mode-toggle">
+                    <button
+                        :class="['toggle-btn', { active: mode === 'checkin' }]"
+                        @click="setMode('checkin')"
+                    >
+                        Check-In
+                    </button>
+                    <button
+                        :class="['toggle-btn', { active: mode === 'souvenir' }]"
+                        @click="setMode('souvenir')"
+                    >
+                        Souvenir
+                    </button>
+                </div>
+            </div>
             <span class="powered">Powered By Vartech.id </span>
         </div>
     </div>
@@ -29,6 +42,36 @@
 </template>
 
 <style scoped>
+
+
+
+.mode-toggle {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+}
+
+.toggle-btn {
+    border: none;
+    background: transparent;
+    padding: 10px 50px;  /* toggle width and height */
+    border-radius: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background: #084225;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* toggle */
 .page {
     min-height: 100vh;
     display: flex;
