@@ -58,7 +58,7 @@ const cancelModeChange = () => {
           </div>
         </div>
 
-        <span class="powered">Powered By Vartech.id </span>
+        <span class="powered"> </span>
       </div>
     </div>
 

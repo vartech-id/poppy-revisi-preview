@@ -14,7 +14,7 @@ const goNext = () => router.push({name : 'form'})
                 <img class="mainLogo" src="./assets/pertamina/mainLogo.png" alt="pertaminaLogo"></img>
                 <img class="detail-event" src="./assets/pertamina/detail.png" alt="detail-acara"></img>
                 <button class="buttonRegister" @click="goNext">Click to register</button>
-                <span>Powered By Vartech.id </span>
+                <span></span>
             </div>
         </div>
     </main>
@@ -88,16 +88,12 @@ const goNext = () => router.push({name : 'form'})
 }
 
 span{
-  padding-top: 12em;
+  padding-top: 40em;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: white;
-  text-shadow: 
-    -2px -2px 0 #00415a,
-     2px -2px 0 #00415a,
-    -2px  2px 0 #00415a,
-     2px  2px 0 #00415a,
-     0px  0px 4px #00415a;
+  color: black;
+  font-size: 6px;
+  padding-left: 11em;
 }
 </style>

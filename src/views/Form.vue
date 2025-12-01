@@ -50,7 +50,7 @@ const submit = () => {
                     </div>
                         <button type="submit" class="buttonForm">Submit</button>
                 </form>
-                <span>Powered By Vartech.id </span>
+                <span></span>
             </div>
         </div>
     </main>

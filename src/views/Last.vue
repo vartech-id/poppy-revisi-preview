@@ -8,7 +8,7 @@
         <div class="mainContent">
             <img class="mainLogo" src="./assets/pertamina/mainLogo.png" alt="poppylogo"></img>
             <img class="thankYou" src="./assets/pertamina/thankyou.png" alt="thankyou"></img>
-            <span>Powered By Vartech.id </span>
+            <span> </span>
         </div>
     </div>
   </main>

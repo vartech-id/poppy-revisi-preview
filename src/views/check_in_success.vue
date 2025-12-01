@@ -37,7 +37,7 @@ const setMode = (newMode) => {
                     </button>
                 </div>
             </div> -->
-            <span class="powered">Powered By Vartech.id </span>
+            <span class="powered"> </span>
         </div>
     </div>
   </main>
@@ -105,7 +105,7 @@ const setMode = (newMode) => {
   justify-content: center;
   align-items: center;
   gap: 9em;
-  padding-top: 3em;
+  padding-top: 0em;
     }
 
 .mainLogo {
