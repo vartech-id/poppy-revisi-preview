@@ -65,6 +65,13 @@ span{
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: white;
+  text-shadow: 
+    -2px -2px 0 #00415a,
+     2px -2px 0 #00415a,
+    -2px  2px 0 #00415a,
+     2px  2px 0 #00415a,
+     0px  0px 4px #00415a;
 }
 
 </style>

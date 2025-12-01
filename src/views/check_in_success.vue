@@ -4,7 +4,6 @@ import { ref } from 'vue';
 const mode = ref("checkin");
 const setMode = (newMode) => {
     mode.value = newMode;
-    focusInput();
 };
 </script>
 
@@ -14,12 +13,15 @@ const setMode = (newMode) => {
         <div class="mainContent">
             <img class="mainLogo" src="./assets/pertamina/mainLogo.png" alt="poppylogo"></img>
             <div class="detail-wrapper">
-                <span>Nama : </span>
-                <span>No Whatsapp : </span>
-                <span>Email : </span>
-                <span>Status Check-in : </span>
+                <span>Nama : Samuel Ilham </span>
+                <span>No Whatsapp : 085792190211</span>
+                <span>Email : flip360.id.solo@gmail.com </span>
+                <span>Company : Vartech.id</span>
+                <span>Kategori Tamu : VIP </span>
+                <span>Check-in at : 01-Dec-2025 12:24 WIB </span>
+                <span>Status : Qr Sudah pernah digunakan sebelumnya</span>
             </div>
-        <div class="mode-toggle-container">
+        <!-- <div class="mode-toggle-container">
                 <div class="mode-toggle">
                     <button
                         :class="['toggle-btn', { active: mode === 'checkin' }]"
@@ -34,7 +36,7 @@ const setMode = (newMode) => {
                         Souvenir
                     </button>
                 </div>
-            </div>
+            </div> -->
             <span class="powered">Powered By Vartech.id </span>
         </div>
     </div>
@@ -103,7 +105,7 @@ const setMode = (newMode) => {
   justify-content: center;
   align-items: center;
   gap: 9em;
-  padding-top: 9em;
+  padding-top: 3em;
     }
 
 .mainLogo {
@@ -118,7 +120,7 @@ const setMode = (newMode) => {
     font-weight: 300;
     font-style: normal;
     font-size: 3em;
-    padding-top: 1em;
+    padding-top: 2em;
     color:  #3E5D6C;
 
 }
@@ -128,10 +130,15 @@ const setMode = (newMode) => {
   font-weight: 400;
   font-style: normal;
   font-size: 2em;
-  padding-top: 7em;
+  color: white;
+  padding-top: 3em;
+  text-shadow: 
+    -2px -2px 0 #00415a,
+     2px -2px 0 #00415a,
+    -2px  2px 0 #00415a,
+     2px  2px 0 #00415a,
+     0px  0px 4px #00415a;
 }
-
-/* TOGLE BUTTON */
 
 .toggle-wrapper{
     display: flex;
@@ -197,7 +204,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
