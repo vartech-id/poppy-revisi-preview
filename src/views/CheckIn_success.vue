@@ -13,7 +13,7 @@
           <span class="label-waktu-check-in">Waktu Check-In :</span>          
         </div>
         <div class="data-tamu">
-          <span class="input-nama">Data paling panjang sudah pas tidak kemana</span>
+          <span class="input-nama">Data paling panjang sudah pas tidak kemana mana</span>
           <span class="input-wa">085792190211</span>
           <span class="input-jumlah">2 Orang</span>
           <span class="input-checkin"> 16.30 WIB </span>
@@ -44,8 +44,8 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  row-gap: 2em;
-  padding-bottom: 4em;
+  row-gap: 3em;
+  padding-bottom: 5.3em;
 }
 
 .logo-poppy {
@@ -53,7 +53,7 @@
 }
 
 .label-berhasil-scan{
-  font-size: 1.4em;
+  font-size: 1.7em;
   font-family: "Avenir", sans-serif;
   color: #024123;
 }
@@ -83,7 +83,7 @@
 .data-tamu{
   text-align: center;
   border: 1px solid white;
-  width: 400px;
+  width: 520px;
 }
 
 .status-qr-wrapper{
@@ -95,18 +95,19 @@
 }
 
 .status-title{
-  font-size: 1em;
+  font-size: 1.5em;
+  padding-top: 0.6em;
 }
 
 .status-qr{
-  padding-top: 1.7em;
-  font-size: 1.2em;
+  padding-top: 2.5em;
+  font-size: 1.5em;
   
 }
 
 /* label detail nama no wa jumlah tamu wajtu check in */
 .label-input-tamu , .data-tamu {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 
@@ -124,7 +125,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 2.2em;
+  height: 2.8em;
+}
+
+span{
+    color: #024123;
 }
 
 </style>
